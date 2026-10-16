@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Code — The GOAT Plan · Best Value Coding Plan</title>
+  <meta name="description" content="The Command Code GOAT plan: $10/month for $80 of credits, an 8x multiplier, unlimited coding on 50+ top open and closed models. The best low-cost coding plan on the market." />
+  <style>
+    :root {
+      --bg: #08080a;
+      --bg-2: #0e0e12;
+      --panel: rgba(255, 255, 255, 0.035);
+      --panel-2: rgba(255, 255, 255, 0.055);
+      --border: rgba(255, 255, 255, 0.09);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --text: #f3f3f5;
+      --muted: #9a9aa6;
+      --muted-2: #6f6f7a;
+      --gold: #f2c14e;
+      --gold-2: #e0a227;
+      --gold-soft: rgba(242, 193, 78, 0.14);
+      --violet: #8b7cff;
+      --cyan: #4fd6e6;
+      --green: #58d68d;
+      --glow: rgba(242, 193, 78, 0.35);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --mono: "SFMono-Regular", ui-monospace, "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+      --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(820px 520px at 50% -8%, rgba(242, 193, 78, 0.16), transparent 62%),
+        radial-gradient(700px 500px at 88% 12%, rgba(139, 124, 255, 0.10), transparent 60%),
+        radial-gradient(760px 560px at 6% 40%, rgba(79, 214, 230, 0.07), transparent 62%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: radial-gradient(ellipse at 50% 0%, black 25%, transparent 72%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1140px, 92%); margin-inline: auto; }
+    section { padding: 92px 0; }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-soft);
+      border: 1px solid rgba(242, 193, 78, 0.3);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+    }
+    h1, h2, h3 { line-height: 1.12; font-weight: 800; letter-spacing: -0.025em; }
+    h1 { font-size: clamp(2.6rem, 6.2vw, 4.8rem); margin-bottom: 22px; }
+    h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 14px; }
+    h3 { font-size: clamp(1.1rem, 2.4vw, 1.35rem); margin-bottom: 10px; }
+    .center { text-align: center; }
+    .section-sub { color: var(--muted); max-width: 640px; font-size: 1.05rem; }
+    .center .section-sub { margin: 0 auto 52px; }
+    .gold-text {
+      background: linear-gradient(100deg, #ffe6a3 0%, var(--gold) 45%, var(--gold-2) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    code {
+      font-family: var(--mono);
+      font-size: 0.88em;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 7px;
+      color: var(--gold);
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(16px);
+      background: rgba(8, 8, 10, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 20px; }
+    .logo { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; }
+    .logo-mark {
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #1a1a1f, #000);
+      border: 1px solid var(--border-strong);
+      display: grid; place-items: center;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      box-shadow: inset 0 0 14px rgba(242, 193, 78, 0.18);
+    }
+    .nav-links { display: flex; gap: 26px; font-size: 0.92rem; color: var(--muted); }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(120deg, var(--gold), var(--gold-2));
+      color: #17130a;
+      font-weight: 800;
+      padding: 9px 19px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 26px var(--glow); }
+
+    /* Hero */
+    .hero { padding: 104px 0 60px; text-align: center; position: relative; }
+    .hero p.lead { max-width: 700px; margin: 0 auto 34px; color: var(--muted); font-size: 1.14rem; }
+    .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .btn-primary {
+      background: linear-gradient(120deg, var(--gold), var(--gold-2));
+      color: #17130a;
+      box-shadow: 0 12px 36px var(--glow);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 46px var(--glow); }
+    .btn-ghost { border-color: var(--border-strong); color: var(--text); background: var(--panel); }
+    .btn-ghost:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .hero-badge-row { margin-top: 40px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .hero-badge {
+      font-size: 0.82rem;
+      color: var(--muted);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 6px 15px;
+      border-radius: 999px;
+    }
+    .hero-badge strong { color: var(--gold); }
+
+    /* Price showcase */
+    .price-hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: baseline;
+      margin: 8px 0 6px;
+    }
+    .price-hero .big { font-size: clamp(3rem, 9vw, 5.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+    .price-hero .per { color: var(--muted); font-size: 1.15rem; font-weight: 600; }
+    .multiplier {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      color: var(--green);
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      text-align: center;
+      transition: transform .25s, border-color .25s;
+    }
+    .stat:hover { transform: translateY(-6px); border-color: rgba(242,193,78,.5); }
+    .stat .num {
+      font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+      font-weight: 800;
+      background: linear-gradient(120deg, #ffe6a3, var(--gold-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      letter-spacing: -0.03em;
+    }
+    .stat .label { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+
+    /* Cards */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(242,193,78,.45);
+      box-shadow: 0 20px 52px rgba(0,0,0,.5);
+    }
+    .card .icon {
+      width: 50px; height: 50px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(242,193,78,.16), rgba(242,193,78,.04));
+      border: 1px solid rgba(242,193,78,.3);
+    }
+    .card h3 { font-size: 1.18rem; margin-bottom: 9px; }
+    .card p { color: var(--muted); font-size: 0.96rem; }
+
+    /* Value / included list */
+    .included {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .inc-item {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .inc-item .tick {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(88, 214, 141, 0.14);
+      border: 1px solid rgba(88, 214, 141, 0.4);
+      color: var(--green);
+      display: grid; place-items: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+    .inc-item p { font-size: 0.93rem; color: var(--muted); }
+    .inc-item strong { color: var(--text); font-weight: 700; }
+
+    /* Tables */
+    .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 680px; }
+    th, td { padding: 14px 20px; text-align: left; font-size: 0.92rem; }
+    thead th {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(242,193,78,.05); }
+    td.model-name { font-weight: 600; white-space: nowrap; }
+    td.credit { color: var(--gold); font-weight: 800; white-space: nowrap; }
+    td.num-cell { font-family: var(--mono); font-size: 0.86rem; color: var(--muted); }
+    .table-note { margin-top: 14px; font-size: 0.8rem; color: var(--muted-2); }
+
+    /* Limits */
+    .limit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .limit-card {
+      background: linear-gradient(160deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      text-align: center;
+    }
+    .limit-card .window { color: var(--muted); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+    .limit-card .amount { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--gold); margin: 8px 0 4px; letter-spacing: -0.03em; }
+    .limit-card .desc { color: var(--muted); font-size: 0.85rem; }
+
+    /* Comparison */
+    .cmp-scroll { overflow-x: auto; }
+    .cmp { width: 100%; border-collapse: collapse; min-width: 780px; }
+    .cmp th, .cmp td { padding: 15px 18px; text-align: center; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+    .cmp thead th { font-size: 0.8rem; }
+    .cmp thead th .plan-name { display: block; font-size: 1rem; color: var(--text); font-weight: 800; letter-spacing: -0.01em; }
+    .cmp thead th .plan-price { display: block; color: var(--gold); font-size: 0.82rem; font-weight: 700; margin-top: 2px; }
+    .cmp td:first-child, .cmp th:first-child { text-align: left; color: var(--muted); }
+    .cmp .goat-col { background: rgba(242,193,78,.07); }
+    .cmp thead th.goat-col { border-radius: 12px 12px 0 0; }
+    .cmp .yes { color: var(--green); font-weight: 700; }
+    .cmp .no { color: var(--muted-2); }
+    .cmp .tick-cell { color: var(--gold); font-weight: 800; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .step-number {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #17130a;
+      display: grid; place-items: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    /* Code block */
+    .codeblock {
+      background: #060608;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: #d7d7de;
+      overflow-x: auto;
+      margin-top: 16px;
+      line-height: 1.7;
+    }
+    .codeblock .c { color: var(--muted-2); }
+    .codeblock .k { color: var(--cyan); }
+    .codeblock .s { color: var(--gold); }
+
+    /* Quote */
+    .quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+    .quote {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .quote p { font-size: 1.02rem; font-weight: 500; line-height: 1.55; }
+    .quote .who { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .quote .who img { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border-strong); }
+    .quote .who .name { font-weight: 700; font-size: 0.92rem; }
+    .quote .who .role { color: var(--muted); font-size: 0.82rem; }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: linear-gradient(120deg, rgba(242,193,78,.14), rgba(139,124,255,.07));
+      border: 1px solid rgba(242,193,78,.32);
+      border-radius: var(--radius-lg);
+      padding: 66px 36px;
+    }
+    .cta h2 { margin-bottom: 12px; }
+    .cta p { color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+
+    /* FAQ */
+    .faq { max-width: 880px; margin: 0 auto; }
+    .faq-item {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 14px;
+    }
+    .faq-item h3 { font-size: 1.03rem; margin-bottom: 8px; color: var(--text); }
+    .faq-item p { color: var(--muted); font-size: 0.94rem; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 48px 0; color: var(--muted-2); font-size: 0.85rem; }
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .note-box {
+      background: rgba(139, 124, 255, 0.07);
+      border-left: 3px solid var(--violet);
+      padding: 16px 22px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+    .note-box p { color: var(--muted); font-size: 0.92rem; }
+    .note-box.gold { background: var(--gold-soft); border-left-color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .limit-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      section { padding: 68px 0; }
+    }
+    @media (max-width: 520px) {
+      .hero { padding-top: 76px; }
+      .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">CC</span>
+        <span>Command Code</span>
+      </a>
+      <div class="nav-links">
+        <a href="#why">Why GOAT</a>
+        <a href="#models">Models</a>
+        <a href="#limits">Limits</a>
+        <a href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="https://commandcode.ai/billing" target="_blank" rel="noopener">Subscribe to GOAT</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container">
+      <span class="kicker">Best value plan on the market</span>
+      <h1>Subscribe. <span class="gold-text">Be a GOAT.</span></h1>
+      <div class="price-hero">
+        <span class="big gold-text">$10</span>
+        <span class="per">/ month</span>
+      </div>
+      <p class="lead">
+        The Command Code <strong>GOAT</strong> plan gives you unlimited coding on
+        <strong>50+ top open and closed models</strong>. Your $10 buys <strong>$80 of credits</strong> — an
+        <strong>8× multiplier</strong>, the highest of any $10 coding plan — stretching past <strong>$100</strong> with deals.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="https://commandcode.ai/billing" target="_blank" rel="noopener">Subscribe to GOAT →</a>
+        <a class="btn btn-ghost" href="https://commandcode.ai/docs/plans/goat" target="_blank" rel="noopener">Read the docs</a>
+      </div>
+      <div class="hero-badge-row">
+        <span class="hero-badge"><strong>$80</strong> credits included</span>
+        <span class="hero-badge"><strong>~75K</strong> requests</span>
+        <span class="hero-badge"><strong>50+</strong> models</span>
+        <span class="hero-badge"><strong>99%+</strong> cache hit rates</span>
+        <span class="hero-badge">API access included</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section style="padding-top: 0;">
+    <div class="container stats reveal">
+      <div class="stat"><div class="num">8×</div><div class="label">Credits per dollar ($10 → $80)</div></div>
+      <div class="stat"><div class="num">~75K</div><div class="label">Typical requests per month</div></div>
+      <div class="stat"><div class="num">50+</div><div class="label">Models via <code>/model</code></div></div>
+      <div class="stat"><div class="num">~98%</div><div class="label">Infra cache hit rates</div></div>
+    </div>
+  </section>
+
+  <!-- Why GOAT -->
+  <section id="why" class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Why create the <span class="gold-text">GOAT plan?</span></h2>
+        <p class="section-sub">
+          Command Code is the best coding agent for open models. GOAT is our answer to making frontier
+          open-model coding genuinely accessible — the best value in the coding market today.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="icon">🏆</div>
+          <h3>Best Value on the Market</h3>
+          <p>
+            $10 a month, $80 of per-model credit allowances — an 8× multiplier, the highest of any $10 coding plan.
+            With deals applied, that stretches beyond $100: more than 10× what you pay.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🧠</div>
+          <h3>taste-1: Learns Your Taste</h3>
+          <p>
+            Every accept, reject, and edit is a signal. Command Code distills those into project-level <code>/skills</code>
+            and personal <code>/memory</code>, so the next session opens with the conventions you already prefer.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🔧</div>
+          <h3>Tool Call Repairs</h3>
+          <p>
+            "Open model bad at tool calling" is a harness problem. We validate and repair every tool call in flight —
+            about <strong>1M repairs per 1T tokens</strong>, free on every plan.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">⚡</div>
+          <h3>Industry-Leading Caching</h3>
+          <p>
+            We run our own infrastructure at leading <strong>99%+ cache hit rates</strong>, the best in the industry.
+            Most of an agent's volume is cache reads — serving the cache well makes every request dramatically cheaper.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🌍</div>
+          <h3>Global Availability</h3>
+          <p>
+            Open-source models run on infrastructure in the US, EU, and Singapore for reliable access worldwide —
+            no regional lock-in, no surprise routing.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🔒</div>
+          <h3>Zero Data Retention</h3>
+          <p>
+            Most models are ZDR by default, and your code is never used for training. You can enforce ZDR on
+            every request with <code>CMD_ZDR=1</code>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>What <span class="gold-text">$10 a month</span> gets you</h2>
+        <p class="section-sub">Everything included on the GOAT plan — no codes, no toggles, discounts baked in.</p>
+      </div>
+
+      <div class="included">
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Every major open model.</strong> Switch any time with <code>/model</code> in interactive mode — DeepSeek, Kimi, GLM, Qwen, MiniMax, MiMo, Grok and more.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>$80 of credits</strong> across per-model allowances — up to <strong>$70 on a single model</strong> like GLM-5.2, Tencent Hy3, or Qwen 3.8 27B.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Usage limits:</strong> $14 of usage in any 5 hours, $35 in any 7 days, $70 per month.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Extra credits any time.</strong> Buy pay-as-you-go credits at model cost — they work on every model (including premium), roll over, and never expire.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>API access.</strong> Use the Provider API with the same key that powers the CLI, against your GOAT credits.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Cloud access.</strong> Run the agent on a cloud machine against your GitHub repo — billed per second at $0.10/hr.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Free models included.</strong> Laguna S 2.1, Glyph Cluster, Cat Jam, and TypeSafe Jev cost no credits.</p></div>
+        <div class="inc-item"><span class="tick">✓</span><p><strong>Usage analytics</strong> with per-request cost and tokens, plus Discord community support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage limits -->
+  <section id="limits" class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Usage <span class="gold-text">limits</span></h2>
+        <p class="section-sub">
+          Limits reset with each window and with your billing cycle. How far each window goes depends on the
+          model — cheaper models allow more requests, pricier models fewer.
+        </p>
+      </div>
+
+      <div class="limit-grid reveal">
+        <div class="limit-card">
+          <div class="window">5-hour limit</div>
+          <div class="amount">$14</div>
+          <div class="desc">of usage in any 5 hours</div>
+        </div>
+        <div class="limit-card">
+          <div class="window">Weekly limit</div>
+          <div class="amount">$35</div>
+          <div class="desc">of usage in any 7 days</div>
+        </div>
+        <div class="limit-card">
+          <div class="window">Monthly limit</div>
+          <div class="amount">$70</div>
+          <div class="desc">of usage per billing cycle</div>
+        </div>
+      </div>
+
+      <div class="note-box gold reveal" style="margin-top: 32px;">
+        <p>
+          <strong>Estimates:</strong> These assume a typical agent request — ~800 fresh input tokens,
+          ~50,000 cache-read tokens, and ~125–200 output tokens. Most of an agent's volume is cache reads,
+          which is why cache hit rates matter so much. A model like DeepSeek V4.1 Flash supports
+          <strong>~41,000 requests per 5-hour window</strong>; GPT-5.6 Sol about <strong>118</strong>.
+        </p>
+      </div>
+
+      <div class="table-wrap reveal" style="margin-top: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Requests / 5 hours</th>
+              <th>Requests / week</th>
+              <th>Requests / month</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="model-name">DeepSeek V4.1 Flash</td><td class="num-cell">41,000</td><td class="num-cell">103,000</td><td class="num-cell">205,000</td></tr>
+            <tr><td class="model-name">DeepSeek V4 Flash (latest)</td><td class="num-cell">30,800</td><td class="num-cell">76,900</td><td class="num-cell">154,000</td></tr>
+            <tr><td class="model-name">MiMo V2.5</td><td class="num-cell">19,500</td><td class="num-cell">48,700</td><td class="num-cell">97,400</td></tr>
+            <tr><td class="model-name">GLM-5.3 Flash</td><td class="num-cell">11,800</td><td class="num-cell">29,500</td><td class="num-cell">59,000</td></tr>
+            <tr><td class="model-name">Tencent Hy3</td><td class="num-cell">7,080</td><td class="num-cell">17,700</td><td class="num-cell">35,400</td></tr>
+            <tr><td class="model-name">Qwen 3.8 27B</td><td class="num-cell">4,790</td><td class="num-cell">12,000</td><td class="num-cell">24,000</td></tr>
+            <tr><td class="model-name">MiniMax M3</td><td class="num-cell">2,770</td><td class="num-cell">6,930</td><td class="num-cell">13,900</td></tr>
+            <tr><td class="model-name">DeepSeek V4 Pro (latest)</td><td class="num-cell">1,980</td><td class="num-cell">4,940</td><td class="num-cell">9,880</td></tr>
+            <tr><td class="model-name">Kimi K2.7 Code</td><td class="num-cell">1,080</td><td class="num-cell">2,710</td><td class="num-cell">5,420</td></tr>
+            <tr><td class="model-name">GLM-5.2</td><td class="num-cell">947</td><td class="num-cell">2,370</td><td class="num-cell">4,740</td></tr>
+            <tr><td class="model-name">Claude Sonnet 5.5</td><td class="num-cell">238</td><td class="num-cell">595</td><td class="num-cell">1,190</td></tr>
+            <tr><td class="model-name">GPT-5.6 Sol</td><td class="num-cell">118</td><td class="num-cell">296</td><td class="num-cell">592</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">A representative slice — the full calculator knows every model's GOAT allowance.</p>
+    </div>
+  </section>
+
+  <!-- Models -->
+  <section id="models" class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Models included on <span class="gold-text">GOAT</span></h2>
+        <p class="section-sub">
+          Every model below is included on the GOAT plan — switch between them any time with <code>/model</code>.
+          Rates are per 1M tokens, in USD. Credits shown are monthly per-model allowances built from your $10.
+        </p>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Input</th>
+              <th>Output</th>
+              <th>Cache read</th>
+              <th>Monthly credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="model-name">GLM-5.3 Flash</td><td class="num-cell">$0.15</td><td class="num-cell">$0.50</td><td class="num-cell">$0.03</td><td class="credit">$100</td></tr>
+            <tr><td class="model-name">Ling 3.1 Flash</td><td class="num-cell">$0.30</td><td class="num-cell">$0.90</td><td class="num-cell">$0.06</td><td class="credit">$100</td></tr>
+            <tr><td class="model-name">DeepSeek V4.1 Flash</td><td class="num-cell">$0.15</td><td class="num-cell">$0.60</td><td class="num-cell">$0.003</td><td class="credit">$80</td></tr>
+            <tr><td class="model-name">GLM-5.2</td><td class="num-cell">$1.40</td><td class="num-cell">$4.40</td><td class="num-cell">$0.26</td><td class="credit">$70</td></tr>
+            <tr><td class="model-name">Tencent Hy3</td><td class="num-cell">$0.14</td><td class="num-cell">$0.58</td><td class="num-cell">$0.035</td><td class="credit">$70</td></tr>
+            <tr><td class="model-name">Qwen 3.8 27B</td><td class="num-cell">$0.40</td><td class="num-cell">$3.00</td><td class="num-cell">$0.04</td><td class="credit">$70</td></tr>
+            <tr><td class="model-name">DeepSeek V4 Flash (latest)</td><td class="num-cell">$0.15</td><td class="num-cell">$0.60</td><td class="num-cell">$0.003</td><td class="credit">$60</td></tr>
+            <tr><td class="model-name">DeepSeek V4.1 Flash Fast</td><td class="num-cell">$0.16</td><td class="num-cell">$0.58</td><td class="num-cell">$0.016</td><td class="credit">$60</td></tr>
+            <tr><td class="model-name">Kimi K2.7 Code</td><td class="num-cell">$0.95</td><td class="num-cell">$4.00</td><td class="num-cell">$0.19</td><td class="credit">$60</td></tr>
+            <tr><td class="model-name">LongCat 2.0</td><td class="num-cell">$0.30</td><td class="num-cell">$1.20</td><td class="num-cell">$0.006</td><td class="credit">$50</td></tr>
+            <tr><td class="model-name">MiniMax M3</td><td class="num-cell">$0.30</td><td class="num-cell">$1.20</td><td class="num-cell">$0.06</td><td class="credit">$47</td></tr>
+            <tr><td class="model-name">Gemini 3.8 Flash</td><td class="num-cell">$1.50</td><td class="num-cell">$7.50</td><td class="num-cell">$0.15</td><td class="credit">$40</td></tr>
+            <tr><td class="model-name">Mistral Large 4</td><td class="num-cell">$1.36</td><td class="num-cell">$4.18</td><td class="num-cell">$0.14</td><td class="credit">$40</td></tr>
+            <tr><td class="model-name">Qwen 3.7 Max</td><td class="num-cell">$2.50</td><td class="num-cell">$7.50</td><td class="num-cell">$0.50</td><td class="credit">$33</td></tr>
+            <tr><td class="model-name">Qwen 3.7 Plus</td><td class="num-cell">$0.40</td><td class="num-cell">$1.60</td><td class="num-cell">$0.08</td><td class="credit">$33</td></tr>
+            <tr><td class="model-name">Qwen 3.6 Plus</td><td class="num-cell">$0.50</td><td class="num-cell">$3.00</td><td class="num-cell">$0.10</td><td class="credit">$33</td></tr>
+            <tr><td class="model-name">MiMo V2.5</td><td class="num-cell">$0.14</td><td class="num-cell">$0.28</td><td class="num-cell">$0.0028</td><td class="credit">$30</td></tr>
+            <tr><td class="model-name">GPT-5.6 Sol</td><td class="num-cell">$5.00</td><td class="num-cell">$30.00</td><td class="num-cell">$0.50</td><td class="credit">$20</td></tr>
+            <tr><td class="model-name">GPT-5.6 Luna</td><td class="num-cell">$0.20</td><td class="num-cell">$1.20</td><td class="num-cell">$0.02</td><td class="credit">$20</td></tr>
+            <tr><td class="model-name">Qwen 3.8 Max</td><td class="num-cell">$2.00</td><td class="num-cell">$6.00</td><td class="num-cell">$0.25</td><td class="credit">$20</td></tr>
+            <tr><td class="model-name">DeepSeek V4 Pro (latest)</td><td class="num-cell">$0.66</td><td class="num-cell">$1.98</td><td class="num-cell">$0.022</td><td class="credit">$20</td></tr>
+            <tr><td class="model-name">MiMo V2.5 Pro</td><td class="num-cell">$0.435</td><td class="num-cell">$0.87</td><td class="num-cell">$0.0036</td><td class="credit">$20</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3" style="margin-top: 24px;">
+        <div class="card reveal">
+          <h3>Premium models</h3>
+          <p>
+            <strong>Claude Sonnet 5.5</strong> carries $10 in monthly credits at public API prices,
+            <strong>Claude Haiku 5.5</strong> gets $20. The rest of the premium lineup needs Pro or Max.
+          </p>
+        </div>
+        <div class="card reveal">
+          <h3>New models</h3>
+          <p>
+            New models start at 2× credits — $20 on the $10/mo plan — until better deals land. Still
+            2× your money at public API prices, updating automatically when a deal starts.
+          </p>
+        </div>
+        <div class="card reveal">
+          <h3>Older models</h3>
+          <p>
+            Kimi K2.6, GLM-5.1, GLM-5, Qwen 3.7 Flash, MiniMax M2.7, MiniMax M2.5 and more —
+            all at the standard $20 credits for the $10 GOAT plan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How is 8x possible -->
+  <section class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>How is <span class="gold-text">8×</span> possible?</h2>
+        <p class="section-sub">
+          You pay $10 and code with up to $80 of per-model credit allowances. This is phenomenal harness and
+          inference engineering, not a loss leader.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="icon">🤝</div>
+          <h3>Direct Provider Deals</h3>
+          <p>
+            We work directly with model teams and providers to negotiate capacity for the models we recommend.
+            When a deal starts, your allowance updates by itself — no codes, no toggles.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🗄️</div>
+          <h3>Leading Cache Hit Rates</h3>
+          <p>
+            We run our infrastructure at ~95–98% cache hit rates. Most of a coding agent's volume is cache reads,
+            so serving the cache well makes every request dramatically cheaper — and those savings return as bigger credits.
+          </p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📉</div>
+          <h3>No Markup, Real Prices</h3>
+          <p>
+            Many providers and agents charge up to 400% over model list prices. We regularly offer deals matching —
+            and sometimes beating — the labs' own API prices.
+          </p>
+        </article>
+      </div>
+
+      <div class="note-box reveal">
+        <p>
+          That's also why credits vary by model. Where we've negotiated capacity, credits are boosted — up to the full
+          $70 on models like GLM-5.2, Tencent Hy3, and Qwen 3.8 27B. New models carry the 2× credits and move up as we
+          land better terms. We regularly move capacity to the latest models that perform better.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section id="compare" class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Every plan, <span class="gold-text">side by side</span></h2>
+        <p class="section-sub">
+          From a buck a month to all-out, all-models. GOAT sits at the sweet spot — $10 for $80 of credits.
+        </p>
+      </div>
+
+      <div class="table-wrap cmp-scroll reveal">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th><span class="plan-name">Go</span><span class="plan-price">$1/mo</span></th>
+              <th class="goat-col"><span class="plan-name">GOAT</span><span class="plan-price">$10/mo</span></th>
+              <th><span class="plan-name">Pro</span><span class="plan-price">$20/mo</span></th>
+              <th><span class="plan-name">Max 10×</span><span class="plan-price">$100/mo</span></th>
+              <th><span class="plan-name">Max 20×</span><span class="plan-price">$200/mo</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly credits</td>
+              <td class="num-cell">$10</td>
+              <td class="goat-col tick-cell">$80</td>
+              <td class="num-cell">$150</td>
+              <td class="num-cell">$300</td>
+              <td class="num-cell">$600</td>
+            </tr>
+            <tr>
+              <td>Typical request volume</td>
+              <td class="num-cell">~9K</td>
+              <td class="goat-col tick-cell">~75K</td>
+              <td class="num-cell">~100K</td>
+              <td class="num-cell">~219K</td>
+              <td class="num-cell">~437K</td>
+            </tr>
+            <tr>
+              <td>MiniMax M3 effective usage</td>
+              <td class="num-cell">$8</td>
+              <td class="goat-col tick-cell">$47</td>
+              <td class="num-cell">$57</td>
+              <td class="num-cell">~$300</td>
+              <td class="num-cell">~$600</td>
+            </tr>
+            <tr>
+              <td>Open models</td>
+              <td class="yes">✓</td>
+              <td class="goat-col yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>Select premium models</td>
+              <td class="yes">✓</td>
+              <td class="goat-col yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>All premium models (Claude, GPT, Gemini)</td>
+              <td class="no">—</td>
+              <td class="goat-col no">—</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>taste-1 (learns your taste)</td>
+              <td class="yes">✓</td>
+              <td class="goat-col yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>API access</td>
+              <td class="no">—</td>
+              <td class="goat-col yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>Cloud access</td>
+              <td class="no">—</td>
+              <td class="goat-col num-cell">$0.10/hr</td>
+              <td class="num-cell">$0.10/hr</td>
+              <td class="num-cell">$0.10/hr</td>
+              <td class="num-cell">$0.10/hr</td>
+            </tr>
+            <tr>
+              <td>Context window</td>
+              <td class="num-cell">Up to 1M</td>
+              <td class="goat-col num-cell">Up to 1M</td>
+              <td class="num-cell">Up to 1M</td>
+              <td class="num-cell">Up to 1M</td>
+              <td class="num-cell">Up to 1M</td>
+            </tr>
+            <tr>
+              <td>Rate limits</td>
+              <td class="num-cell">Standard</td>
+              <td class="goat-col num-cell">Standard</td>
+              <td class="num-cell">Standard</td>
+              <td class="num-cell">Higher</td>
+              <td class="num-cell">Highest</td>
+            </tr>
+            <tr>
+              <td>Usage analytics</td>
+              <td class="num-cell">Limited</td>
+              <td class="goat-col num-cell">Per-request</td>
+              <td class="num-cell">Per-request</td>
+              <td class="num-cell">Per-request</td>
+              <td class="num-cell">Per-request</td>
+            </tr>
+            <tr>
+              <td>No training on your code</td>
+              <td class="yes">✓</td>
+              <td class="goat-col yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Also available: Provider ($15/mo), Teams ($40/mo), and custom Enterprise. Every plan except Go includes API access.</p>
+    </div>
+  </section>
+
+  <!-- API -->
+  <section class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>GOAT has <span class="gold-text">API access</span></h2>
+        <p class="section-sub">
+          Call the Provider API endpoints with your Command Code API key. Usage meters against your GOAT credits
+          and the models included above. One key authenticates both the CLI and the API.
+        </p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="card">
+          <div class="step-number">1</div>
+          <h3>Subscribe</h3>
+          <p>Pick the GOAT plan from Studio → Billing or the pricing page. Every plan except the Go plan has API access.</p>
+        </div>
+        <div class="card">
+          <div class="step-number">2</div>
+          <h3>Create an API key</h3>
+          <p>The same key authenticates the CLI and the API. Create one from your API keys page in Studio.</p>
+        </div>
+        <div class="card">
+          <div class="step-number">3</div>
+          <h3>Call the API</h3>
+          <p>Point any OpenAI or Anthropic compatible client at the Command Code provider endpoint.</p>
+        </div>
+      </div>
+
+      <div class="codeblock reveal">
+<span class="c"># OpenAI-compatible endpoint</span>
+<span class="k">curl</span> https://api.commandcode.ai/provider/v1/chat/completions \
+  -H <span class="s">"Authorization: Bearer &lt;CMD_API_KEY&gt;"</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "deepseek/deepseek-v4-flash",
+    "messages": [{"role": "user", "content": "Write a haiku about race conditions."}]
+  }'</span>
+      </div>
+      <div class="note-box gold reveal" style="margin-top: 20px;">
+        <p>
+          We still recommend the Command Code CLI — harness engineering makes the same credits go further.
+          The Read tool keeps ~25 billion junk tokens a month out of your context, tool call repairs are free on
+          every plan, and ~98% cache hit rates mean most of every request bills as cheap cache reads.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get started -->
+  <section class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Get started in <span class="gold-text">minutes</span></h2>
+        <p class="section-sub">Install. Sign in. Code. Pick GOAT and be a GOAT.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="step-number">1</div>
+          <h3>Install</h3>
+          <p>Install the CLI globally with npm.</p>
+          <div class="codeblock">npm i -g command-code</div>
+        </article>
+        <article class="card reveal">
+          <div class="step-number">2</div>
+          <h3>Sign in &amp; code</h3>
+          <p>Start the agent with <code>cmd</code> on macOS/Linux or <code>cmdc</code> on Windows.</p>
+          <div class="codeblock">cmd   <span class="c"># cmdc on Windows</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="step-number">3</div>
+          <h3>Pick GOAT</h3>
+          <p>Choose the GOAT plan from Studio → Billing or the pricing page.</p>
+          <div class="codeblock">Studio → Billing → GOAT</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Developers <span class="gold-text">love it</span>. Founders, too.</h2>
+        <p class="section-sub">100K+ developers, 40K+ paid customers, 130T+ tokens served.</p>
+      </div>
+
+      <div class="quote-grid">
+        <div class="quote reveal">
+          <p>“Command Code learns my taste. After a week, it stopped making the mistakes I kept fixing in other agents. The diffs feel like a senior engineer who already read the codebase.”</p>
+          <div class="who">
+            <img src="https://github.com/zenorocha.png?s=160" alt="Zeno Rocha" loading="lazy" />
+            <div>
+              <div class="name">Zeno Rocha</div>
+              <div class="role">Founder &amp; CEO · Resend</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote reveal">
+          <p>“Command Code is the first agent where I trust open models in production. The harness is so solid I had to double check I was still on DeepSeek Flash. Shipped multiple CLIs and a full Redwood app for $2.”</p>
+          <div class="who">
+            <img src="https://github.com/dthyresson.png?s=160" alt="David Thyresson" loading="lazy" />
+            <div>
+              <div class="name">David Thyresson</div>
+              <div class="role">GP · PWV · RedwoodSDK contributor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta reveal">
+        <h2>Subscribe. <span class="gold-text">Be a GOAT.</span></h2>
+        <p>
+          $10 a month. $80 of credits. 50+ models. The best low-cost coding plan on the market —
+          built for developers who live on open models.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://commandcode.ai/billing" target="_blank" rel="noopener">Subscribe to GOAT →</a>
+          <a class="btn btn-ghost" href="https://commandcode.ai/docs/plans/goat" target="_blank" rel="noopener">Read the GOAT docs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="reveal">
+    <div class="container">
+      <div class="center">
+        <h2>Frequently Asked <span class="gold-text">Questions</span></h2>
+        <p class="section-sub">Everything you need to know before subscribing to GOAT.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item reveal">
+          <h3>What models are available on the GOAT plan?</h3>
+          <p>
+            GOAT offers both open and closed models. Switch any time with <code>/model</code> in interactive mode —
+            DeepSeek, Kimi, GLM, Qwen, MiniMax, MiMo, Grok, Gemini, Mistral, LongCat, Ling, and more, plus select
+            premium models like Claude Sonnet 5.5 and Claude Haiku 5.5.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>What are the usage limits?</h3>
+          <p>
+            $14 of usage in any 5 hours, $35 in any 7 days, and $70 per month. Limits reset with each window and
+            with your billing cycle. Your budget refreshes at the start of every billing cycle, with every model
+            discount already baked in.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>How is the 8× multiplier possible?</h3>
+          <p>
+            You pay $10 and code with up to $80 of per-model credit allowances. It works through phenomenal harness
+            and inference engineering: direct capacity deals with model teams, and running our own infrastructure at
+            leading ~95–98% cache hit rates. Most of a coding agent's volume is cache reads, so serving the cache well
+            makes every request dramatically cheaper.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Can I buy extra credits?</h3>
+          <p>
+            Yes, any time. Buy pay-as-you-go credits at model cost — they work on every model (including premium),
+            roll over, and never expire. Buy them from Studio → Billing, 5 to 500 credits at a time, and pay in $
+            with a card, Alipay, or crypto, or in ₹ with UPI where offered.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Can I use the GOAT plan via API?</h3>
+          <p>
+            Yes. Every plan except Go has API access. You use the same Provider API (OpenAI Chat Completions and
+            Anthropic Messages endpoints, one key for the CLI and the API), so you can integrate GOAT with any other
+            agent. We still recommend the CLI — harness engineering makes the same credits go further.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Is the GOAT plan available worldwide?</h3>
+          <p>
+            Yes. Open-source models run on infrastructure in the US, EU, and Singapore for reliable access worldwide.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Can I enforce zero data retention?</h3>
+          <p>
+            Yes. Most models are ZDR by default — agreements are renewed monthly and can take time for brand-new models.
+            You can also enforce ZDR on every request (which can change model prices based on the provider). Run the CLI
+            with <code>CMD_ZDR=1</code> — for example, <code>CMD_ZDR=1 cmd</code> — to enforce zero data retention and no
+            prompt training on every request.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Is my code used for training?</h3>
+          <p>
+            No. Never. Your code, your skills, and your memory stay on your machine. Command Code never trains on your work.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Can I change my mind?</h3>
+          <p>
+            Always. Upgrade, downgrade, or cancel from Studio → Billing. No hoops, no penalties. You keep access until
+            the end of your billing cycle, and any unused credits roll over forever.
+          </p>
+        </div>
+
+        <div class="faq-item reveal">
+          <h3>Why Command Code instead of another agent?</h3>
+          <p>
+            Command Code is the best coding agent for open models. It lives in your terminal and continuously learns
+            your coding taste. Powered by taste-1, it ships, fixes, tests, and refactors with the patterns you keep and
+            forgets the ones you delete — proven at 30T scale, 130T+ tokens served, by 100K+ developers and 40K+ paid customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        Command Code — the best coding agent for open models. Unofficial GOAT plan overview.
+      </div>
+      <div class="footer-links">
+        <a href="https://commandcode.ai" target="_blank" rel="noopener">commandcode.ai</a>
+        <a href="https://commandcode.ai/docs/plans/goat" target="_blank" rel="noopener">GOAT docs</a>
+        <a href="https://commandcode.ai/pricing" target="_blank" rel="noopener">Pricing</a>
+        <a href="https://commandcode.ai/billing" target="_blank" rel="noopener">Billing</a>
+        <a href="https://x.com/CommandCodeAI" target="_blank" rel="noopener">X</a>
+        <a href="https://commandcode.ai/discord" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
