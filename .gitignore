@@ -1,1 +1,6 @@
 .commandcode/
+.venv/
+env.txt
+chatgpt-transcript.txt
+.env.commandcode
+hello world.py
